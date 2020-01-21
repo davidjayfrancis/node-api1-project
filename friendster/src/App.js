@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 
@@ -47,9 +46,9 @@ function App() {
     <div className="App">
       <p>Friend's Capacitator</p>
       <AddFriendForm addFriend={addFriend} />
-      {friends.map(friend => {
+      {friends.map(function(friend, index) {
         return (
-          <div>
+          <div key={index}>
             <p>
               {friend.name}: {friend.bio}
             </p>
